@@ -108,6 +108,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\withdraw_funds.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\MainStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -131,6 +135,9 @@
     </Compile>
     <Compile Include="Pages\Lisenze.xaml.cs">
       <DependentUpon>Lisenze.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\withdraw_funds.xaml.cs">
+      <DependentUpon>withdraw_funds.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -211,6 +218,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Stop_New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\qiviCard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Btc_Card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ButtonNext_Order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ButtonNextBtc.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
