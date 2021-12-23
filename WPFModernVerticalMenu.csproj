@@ -122,6 +122,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\InternetCheck.cs" />
     <Compile Include="Model\Item.cs" />
     <Compile Include="Model\Matematic.cs" />
     <Compile Include="Pages\Dashboard.xaml.cs">
