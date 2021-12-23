@@ -22,7 +22,7 @@
             <Grid Grid.Row="0">
 
                 <StackPanel Orientation="Vertical">
-                    <TextBlock Text="Главная страница" FontSize="30" Foreground="{DynamicResource PrimaryTextColor}" FontWeight="Bold"
+                    <TextBlock Text="Рабочая зона" FontSize="28" Foreground="{DynamicResource PrimaryIconColor}" FontWeight="Bold"
                    VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
@@ -81,14 +81,18 @@
 
 
                 <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Image Name="Btn_Start" Height="40" Width="150"   Cursor="Hand" Margin="0 0 50 0" MouseDown="Btn_Start_MouseDown">
+                    <Image Name="Btn_Start"   Cursor="Hand" Margin="0 0 50 0" MouseDown="Btn_Start_MouseDown">
                         <Image.Style>
                             <Style TargetType="{x:Type Image}">
                                 <Setter Property="Source" Value="/Resources/Start_Norm.png"/>
+                                <Setter Property="Height" Value="40"/>
+                                <Setter Property="Width" Value="150"/>
                                 <Style.Triggers>
                                     <DataTrigger Binding="{Binding IsMouseOver, ElementName=Btn_Start}"
                                              Value="True">
                                         <Setter Property="Source" Value="/Resources/Start_New.png"/>
+                                        <Setter Property="Height" Value="45"/>
+                                        <Setter Property="Width" Value="155"/>
                                     </DataTrigger>
                                 </Style.Triggers>
                             </Style>
@@ -97,14 +101,18 @@
                             <BlurEffect Radius="1"></BlurEffect>
                         </Image.Effect>
                     </Image>
-                    <Image Name="Btn_Stop" Height="40" Width="150"  Cursor="Hand" Margin="0 0 50 0" MouseDown="Btn_Stop_MouseDown">
+                    <Image Name="Btn_Stop" Cursor="Hand" Margin="0 0 50 0" MouseDown="Btn_Stop_MouseDown">
                         <Image.Style>
                             <Style TargetType="{x:Type Image}">
                                 <Setter Property="Source" Value="/Resources/Stop_Norm.png"/>
+                                <Setter Property="Height" Value="40"/>
+                                <Setter Property="Width" Value="150"/>
                                 <Style.Triggers>
                                     <DataTrigger Binding="{Binding IsMouseOver, ElementName=Btn_Stop}"
                                              Value="True">
                                         <Setter Property="Source" Value="/Resources/Stop_New.png"/>
+                                        <Setter Property="Height" Value="45"/>
+                                        <Setter Property="Width" Value="155"/>
                                     </DataTrigger>
                                 </Style.Triggers>
                             </Style>

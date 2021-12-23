@@ -225,5 +225,11 @@
   <ItemGroup>
     <Resource Include="Resources\qiviCard.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ButtonNext_Order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ButtonNextBtc.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

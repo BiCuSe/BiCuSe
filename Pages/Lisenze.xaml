@@ -24,7 +24,7 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-                <TextBlock Text="Активация лицензии" FontSize="26" Foreground="{DynamicResource PrimaryTextColor}" FontWeight="Bold"
+                <TextBlock Text="Активация лицензии" FontSize="26" Foreground="{DynamicResource PrimaryIconColor}" FontWeight="Bold"
                    VerticalAlignment="Top" HorizontalAlignment="Center"/>
             </Grid>
             <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center">
@@ -79,7 +79,7 @@
                             <TextBlock Text="Переведите: " 
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Top"
-                                   FontSize="16"
+                                   FontSize="18"
                                      
                                    Foreground="{DynamicResource PrimaryTextColor}" 
                                        FontFamily="Calibri Light" 
@@ -99,7 +99,7 @@
                             <TextBlock Text="На биткоин кошелк: " 
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
-                                   FontSize="16"
+                                   FontSize="18"
                                    Foreground="{DynamicResource PrimaryTextColor}" FontFamily="Calibri Light"/>
                             <Image Height="45" Width="45" Source="/Resources/BTC.png"></Image>
                             <TextBox Name="txt_Btc" Text="Загружаем с сервеса..." 
