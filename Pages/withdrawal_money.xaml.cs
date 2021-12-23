@@ -68,7 +68,7 @@ namespace WPFModernVerticalMenu.Pages
                 Popup.PlacementTarget = txtBtcAdress;
                 Popup.Placement = PlacementMode.Left;
                 Popup.IsOpen = true;
-                Header.PopupText.Text = "Номер киви кошелька не указан";
+                Header.PopupText.Text = "Адрес биткоин кошелька не указан";
             }
         }
 

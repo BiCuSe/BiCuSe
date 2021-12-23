@@ -29,11 +29,14 @@
                 <Image Source="/Resources/Btc_Card.png"></Image>
                 
             </Grid>
+            
             <!-- Start: Popup User Control -->
             <Popup x:Name="Popup"  AllowsTransparency="True"  HorizontalOffset="0" VerticalOffset="10">
                 <ctls:UserPopup x:Name="Header" Foreground="{DynamicResource PrimaryTextColor}"/>
             </Popup>
             <!-- End: Popup User Control -->
+            
+            
             <!--#region  Вывод на киви-->
             <Grid Grid.Row="2" Grid.Column="0">
                 <Grid.ColumnDefinitions>
@@ -47,6 +50,7 @@
                     <RowDefinition Height="45"></RowDefinition>
                     <RowDefinition Height="70"></RowDefinition>
                 </Grid.RowDefinitions>
+                
                 <!--Доступно на вывод: -->
                 <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Margin="0 0 30 0" VerticalAlignment="Center">
                     <TextBlock Text="Доступно на вывод:"
@@ -150,6 +154,7 @@
                     <RowDefinition Height="45"></RowDefinition>
                     <RowDefinition Height="70"></RowDefinition>
                 </Grid.RowDefinitions>
+                
                 <!--Доступно на вывод: -->
                 <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Margin="0 0 30 0" VerticalAlignment="Center">
                     <TextBlock Text="Доступно на вывод:"
