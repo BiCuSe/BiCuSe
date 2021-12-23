@@ -219,5 +219,11 @@
   <ItemGroup>
     <Resource Include="Resources\Stop_New.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Btc_Card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\qiviCard.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

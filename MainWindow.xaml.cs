@@ -234,6 +234,11 @@ namespace WPFModernVerticalMenu
             fContainer.Navigate(new System.Uri("Pages/Lisenze.xaml", UriKind.RelativeOrAbsolute));
         }
 
+        private void btnProductStock_Click(object sender, RoutedEventArgs e)
+        {
+            fContainer.Navigate(new System.Uri("Pages/withdrawal_money.xaml", UriKind.RelativeOrAbsolute));
+        }
+
         #endregion
 
 

@@ -5,10 +5,31 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WPFModernVerticalMenu.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="550" d:DesignWidth="800"
       Title="withdrawal_money">
     <Border CornerRadius="5" Background="{DynamicResource SecundaryBackgroundColor}">
-        <TextBlock Text="Dashboard" FontSize="30" Foreground="{DynamicResource PrimaryTextColor}" FontWeight="Bold"
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="250"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Вывод денежных средств" FontSize="18" Foreground="{DynamicResource PrimaryTextColor}" FontWeight="Bold"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Image Source="/Resources/qiviCard.png"></Image>
+
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Image Source="/Resources/Btc_Card.png"></Image>
+                
+            </Grid>
+        </Grid>
     </Border>
 </Page>
