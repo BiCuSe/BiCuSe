@@ -1,0 +1,129 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:Model="clr-namespace:WPFModernVerticalMenu.Model"
+      xmlns:local="clr-namespace:WPFModernVerticalMenu.Pages"
+      xmlns:Wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" x:Class="WPFModernVerticalMenu.Pages.Home"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="800"
+      Title="Home"
+    x:Name="this">
+
+        <Border CornerRadius="5" Background="{DynamicResource SecundaryBackgroundColor}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="150"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Главная страница" FontSize="30" Foreground="{DynamicResource PrimaryTextColor}" FontWeight="Bold"
+                   VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+
+                    <Wpf:PieChart HorizontalAlignment="Right" Height="250" Width="250"  VerticalAlignment="Center"  Foreground="#FF1D2335" FontSize="16" FontFamily="Global Serif" >
+                        <Wpf:PieChart.Series>
+                            <Wpf:PieSeries Title="Рефералы" Values="100" DataLabels="True"  LabelPoint="{Binding PointLabel}" Stroke="#FF1D2335"/>
+                            <Wpf:PieSeries Title="Торговля" Values="5852" DataLabels="True" LabelPoint="{Binding PointLabel}" Stroke="#FF1D2335"/>
+
+                            <Wpf:PieSeries Title="Работа ПК" Values="1522" DataLabels="True" LabelPoint="{Binding PointLabel}" Stroke="#FF1D2335"/>
+                        </Wpf:PieChart.Series>
+                    </Wpf:PieChart>
+                </StackPanel>
+                <StackPanel  Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <TextBlock VerticalAlignment="Bottom"
+                               HorizontalAlignment="Right"
+                               FontSize="24"
+                               Foreground="#FFCFC8C8"
+                               Text="Реферальные:" Margin="0,0,0,10" FontFamily="Sitka Text"/>
+                    <TextBlock VerticalAlignment="Bottom"
+                               HorizontalAlignment="Right"
+                               FontSize="24"
+                               Foreground="#FFCFC8C8"
+                               Text="Работа ПК:" Margin="0,0,0,10" FontFamily="Sitka Text"/>
+                    <TextBlock VerticalAlignment="Bottom"
+                               HorizontalAlignment="Right"
+                               FontSize="24"
+                               Foreground="#FFCFC8C8"
+                               Text="Всего заработано:" Margin="0,0,0,0" FontFamily="Sitka Text"/>
+                </StackPanel>
+
+                <StackPanel  Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="80,0,0,0">
+                    <TextBlock Name="referal" VerticalAlignment="Bottom"
+                               HorizontalAlignment="Left"
+                               FontSize="24"
+                               Foreground="#FFFDE0E0"
+                               Text="00.00 Руб" Margin="0,0,0,10" FontFamily="Sitka Text"/>
+
+                    <TextBlock Name="PC" VerticalAlignment="Bottom"
+                               HorizontalAlignment="Left"
+                               FontSize="24"
+                               Foreground="#FFFDE0E0"
+                               Text="00.00 Руб" Margin="0,0,0,10" FontFamily="Sitka Text"/>
+
+                    <TextBlock Name="Vseg_Summa" VerticalAlignment="Bottom"
+                               HorizontalAlignment="Left"
+                               FontSize="24"
+                               Foreground="#FFFDE0E0"
+                               Text="00.00 Руб" Margin="0,0,0,0" FontFamily="Sitka Text"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"></RowDefinition>
+                </Grid.RowDefinitions>
+
+
+                <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Name="Btn_Start" Height="40" Width="150"   Cursor="Hand" Margin="0 0 50 0" MouseDown="Btn_Start_MouseDown">
+                        <Image.Style>
+                            <Style TargetType="{x:Type Image}">
+                                <Setter Property="Source" Value="/Resources/Start_Norm.png"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsMouseOver, ElementName=Btn_Start}"
+                                             Value="True">
+                                        <Setter Property="Source" Value="/Resources/Start_New.png"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                        <Image.Effect>
+                            <BlurEffect Radius="1"></BlurEffect>
+                        </Image.Effect>
+                    </Image>
+                    <Image Name="Btn_Stop" Height="40" Width="150"  Cursor="Hand" Margin="0 0 50 0" MouseDown="Btn_Stop_MouseDown">
+                        <Image.Style>
+                            <Style TargetType="{x:Type Image}">
+                                <Setter Property="Source" Value="/Resources/Stop_Norm.png"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsMouseOver, ElementName=Btn_Stop}"
+                                             Value="True">
+                                        <Setter Property="Source" Value="/Resources/Stop_New.png"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                        <Image.Effect>
+                            <BlurEffect Radius="1"></BlurEffect>
+                        </Image.Effect>
+                    </Image>
+                </StackPanel>
+
+            </Grid>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 10 0 10">
+                <Image Source="/Resources/Internet_Noy.png" Margin="0 0 10 0"></Image>
+                <Label Content="Интернет соединение отсуцтвует"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Foreground="{DynamicResource PrimaryIconColor }"
+                           FontSize="14"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Page>

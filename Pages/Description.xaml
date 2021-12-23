@@ -1,0 +1,60 @@
+﻿<Page x:Class="WPFModernVerticalMenu.Pages.Description"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPFModernVerticalMenu.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="800"
+      Title="Description">
+
+    <Border CornerRadius="5" Background="{DynamicResource SecundaryBackgroundColor}">
+        <Grid Margin="5,10,5,0">
+            <Grid>
+                <Grid>
+                    <StackPanel Orientation="Vertical">
+                        <Image Height="80" Width="500" Source="/Resources/Logo_Description1.png"></Image>
+
+                        <TextBlock  HorizontalAlignment="Center" FontSize="22" 
+                                   Foreground="#FFC1C8CD" 
+                                   TextAlignment="Center" Height="37" Margin="0,40,0,40">
+                            Программа преднозначена Для поиска новых валют<LineBreak/>
+                        </TextBlock>
+                        <TextBlock HorizontalAlignment="Center" FontSize="16" 
+                                   Foreground="#97AAB5" 
+                                   TextAlignment="Center"><Run Text="Все мы прекрассно понимаем о том на сколько важно вовремя получать"/><LineBreak/>
+                            <Run Text="информацию "/><Run Text=" "/>
+                            <Run Text="для любых торгов на крипто биржах."/><LineBreak/>
+                            <Run Text="Для этого мы и готовы платить каждому из вас денежное вознаграждение"/><LineBreak/>
+                            <Run Text="за работу с нами!!!"/>
+                        </TextBlock>
+
+                        <TextBlock  HorizontalAlignment="Center" FontSize="22" 
+                                   Foreground="#FFC1C8CD" 
+                                   TextAlignment="Center" Height="65" Margin="0,60,0,0">
+                            Прочитать более подробно вы можете используя<LineBreak/>
+                            Кнопку ниже
+                        </TextBlock>
+                        <Image Name="Info_Btn" Width="172" Height="44" Margin="0,80,0,0" Cursor="Hand" MouseDown="Info_Btn_MouseDown">
+                            <Image.Style>
+                                <Style TargetType="{x:Type Image}">
+                                    <Setter Property="Source" Value="/Resources/Info_Norm.png"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsMouseOver, ElementName=Info_Btn}"
+                                             Value="True">
+                                            <Setter Property="Source" Value="/Resources/Info_New.png"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Image.Style>
+                            <Image.Effect>
+                                <BlurEffect Radius="1"></BlurEffect>
+                            </Image.Effect>
+                        </Image>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+        </Grid>
+    </Border>
+</Page>
