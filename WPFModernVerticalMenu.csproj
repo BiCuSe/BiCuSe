@@ -44,6 +44,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -122,6 +123,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\hwid.cs" />
     <Compile Include="Model\InternetCheck.cs" />
     <Compile Include="Model\Item.cs" />
     <Compile Include="Model\Matematic.cs" />

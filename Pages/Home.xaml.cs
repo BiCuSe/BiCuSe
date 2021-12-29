@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using LiveCharts;
 using LiveCharts.Wpf;
 using WPFModernVerticalMenu.Model;
@@ -24,10 +26,14 @@ namespace WPFModernVerticalMenu.Pages
     public partial class Home : Page
     {
 
-
+        public static Home selfref{get; set;}
+        private Model.InternetCheck internet = new InternetCheck();
         public Home()
         {
+
             InitializeComponent();
+            selfref = this;
+            Updater();
             this.texttt();
             this.PieChart();
 
@@ -37,6 +43,7 @@ namespace WPFModernVerticalMenu.Pages
 
         int refq = 752;
         int refqq = 1400;
+
 
         public void texttt()
         {
@@ -56,6 +63,23 @@ namespace WPFModernVerticalMenu.Pages
 
         }
 
+        public void Ok()
+        {
+            Btn_Start.IsEnabled = true;
+            Btn_Stop.IsEnabled = true;
+            imgInet.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/Internet_Yes.png"));
+            textInet.Content = "Интернет соединение установлено...";
+        }
+
+        public void No()
+        {
+
+            Btn_Start.IsEnabled = false;
+            Btn_Stop.IsEnabled = false;
+            imgInet.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/Internet_Noy.png"));
+            textInet.Content = "Инетрнет соединее отсуцтвует...";
+        }
+
         private void Btn_Start_MouseDown(object sender, MouseButtonEventArgs e)
         {
 
@@ -66,19 +90,28 @@ namespace WPFModernVerticalMenu.Pages
 
         }
 
-        /* private void PieChart_DataClick(object sender, LiveCharts.ChartPoint chartPoint)
-         {
-             var chart = (LiveCharts.Wpf.PieChart)chartPoint.ChartView;
-             foreach (PieSeries pieSeries in chart.Series)
-                 pieSeries.PushOut = 0;
-             var seleccionarSeries = (PieSeries)chartPoint.SeriesView;
-             seleccionarSeries.PushOut = 5;
-         }*/
 
+        public  void Updater()
+        {
+            new Thread(() => {
+                while (true)
+                {
+                    Thread.Sleep(10000);
+                    bool result = Model.InternetCheck.PingServer(new string[]
+                            {
+                            @"google.com",
+                            @"microsoft.com",
+                            @"ibm.com",
+                            @"wikipedia.org"
+                            });
 
-
-
-
+                    if (result)
+                        this.Dispatcher.Invoke((Action)(() => { selfref.Ok(); }));
+                    else
+                        this.Dispatcher.Invoke((Action)(() => { Home.selfref.No(); }));
+                }
+            }).Start();
+        }
 
     }
 }

@@ -198,7 +198,8 @@ namespace WPFModernVerticalMenu
         #region Кнопки Закрыть развеннуть свернуть
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            Environment.Exit(0);
+          //  Close();
         }
 
         private void btnRestore_Click(object sender, RoutedEventArgs e)
@@ -239,8 +240,17 @@ namespace WPFModernVerticalMenu
             fContainer.Navigate(new System.Uri("Pages/withdrawal_money.xaml", UriKind.RelativeOrAbsolute));
         }
 
+
         #endregion
 
+        private void MenuItem_Loaded(object sender, RoutedEventArgs e)
+        {
+           // Dashboard.xaml
+        }
 
+        private void btnSetting_Click(object sender, RoutedEventArgs e)
+        {
+            fContainer.Navigate(new System.Uri("Pages/Dashboard.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }

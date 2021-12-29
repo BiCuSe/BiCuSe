@@ -34,5 +34,17 @@ namespace WPFModernVerticalMenu.Properties {
                 this["summa"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string HWID {
+            get {
+                return ((string)(this["HWID"]));
+            }
+            set {
+                this["HWID"] = value;
+            }
+        }
     }
 }

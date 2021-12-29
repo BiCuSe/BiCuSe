@@ -4,7 +4,9 @@ using System.Linq;
 using System.Net.NetworkInformation;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using WPFModernVerticalMenu.Pages;
 
 namespace WPFModernVerticalMenu.Model
 {
@@ -23,6 +25,8 @@ namespace WPFModernVerticalMenu.Model
             INTERNET_CONNECTION_OFFLINE = 0x20,
             INTERNET_CONNECTION_CONFIGURED = 0x40
         }
+
+        public bool isConnection { get; set; } = false;
 
         static object _syncObj = new object();
 
@@ -77,5 +81,6 @@ namespace WPFModernVerticalMenu.Model
 
             return haveAnInternetConnection;
         }
+
     }
 }
