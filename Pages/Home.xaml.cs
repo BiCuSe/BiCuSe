@@ -106,7 +106,7 @@ namespace WPFModernVerticalMenu.Pages
                             });
 
                     if (result)
-                        this.Dispatcher.Invoke((Action)(() => { selfref.Ok(); }));
+                         this.Dispatcher.Invoke((Action)(() => { selfref.Ok(); }));
                     else
                         this.Dispatcher.Invoke((Action)(() => { Home.selfref.No(); }));
                 }

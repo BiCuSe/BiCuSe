@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Management;
+using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -26,6 +29,7 @@ namespace WPFModernVerticalMenu.Pages
         {
             InitializeComponent();
             hwdd();
+
         }
 
 
@@ -33,5 +37,6 @@ namespace WPFModernVerticalMenu.Pages
         {
             hwdText.Text = Model.hwid.GetHWID();
         }
+
     }
 }

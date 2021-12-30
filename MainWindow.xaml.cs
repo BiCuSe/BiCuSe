@@ -115,7 +115,7 @@ namespace WPFModernVerticalMenu
                 Popup.PlacementTarget = btnOrderList;
                 Popup.Placement = PlacementMode.Right;
                 Popup.IsOpen = true;
-                Header.PopupText.Text = "Order List";
+                Header.PopupText.Text = "В разработке";
             }
         }
 
@@ -132,7 +132,7 @@ namespace WPFModernVerticalMenu
                 Popup.PlacementTarget = btnBilling;
                 Popup.Placement = PlacementMode.Right;
                 Popup.IsOpen = true;
-                Header.PopupText.Text = "Billing";
+                Header.PopupText.Text = "В разработке";
             }
         }
 
@@ -149,7 +149,7 @@ namespace WPFModernVerticalMenu
                 Popup.PlacementTarget = btnPointOfSale;
                 Popup.Placement = PlacementMode.Right;
                 Popup.IsOpen = true;
-                Header.PopupText.Text = "Poin Of Sale";
+                Header.PopupText.Text = "В разработке";
             }
         }
 
@@ -166,7 +166,7 @@ namespace WPFModernVerticalMenu
                 Popup.PlacementTarget = btnSecurity;
                 Popup.Placement = PlacementMode.Right;
                 Popup.IsOpen = true;
-                Header.PopupText.Text = "Безопастность";
+                Header.PopupText.Text = "В разработке";
             }
         }
 
@@ -182,7 +182,7 @@ namespace WPFModernVerticalMenu
                 Popup.PlacementTarget = btnSetting;
                 Popup.Placement = PlacementMode.Right;
                 Popup.IsOpen = true;
-                Header.PopupText.Text = "Настройки";
+                Header.PopupText.Text = "В разработке";
             }
         }
 
